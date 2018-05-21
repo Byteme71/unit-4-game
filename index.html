@@ -5,26 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <title>Daniela is so Lost in J LAND</title>
+    <title>Daniela is so Lost in JS/JQUERY LAND</title>
 </head>
 <body>
+
+    <h1>Number to Guess: <span id="Number-Guess"> </span></h1>
+
+    <div id="Crystals">
+
+        <img class="BlueCrystal" src="./assets/images/580b585b2edbce24c47b23f2.png" alt="crytsal1">
+
+        <img class="WhiteCrystal" src="./assets/images/diamond_PNG6701.png" alt="crytsal2">
+
+        <img class = "GreenCrystal" src="./assets/images/Large_Emerald_PNG_Clipart_Picture.png" alt="crytsal3">
+
+        <img class="RedCrystal"
+        src="./assets/images/Red_Diamond_PNG_Clipart_Image-802.png" alt="crytsal4">
+
+    </div>
+
+<script>
     
+    var targetNumber = Math.floor((Math.random() * 100) + 19);
+    $("#Number-Guess").text(targetNumber);
+
+    var counter = 0;
+
+    var numberOptions = [10,5,1,7];
+
+    for (var i = 0; i < numberOptions.length; i++){
+
+        $(".BlueCrystal, .WhiteCrystal, .GreenCrystal, .RedCrystal").attr("data-crystalvalue", numberOptions[i]);
+
+        console.log(numberOptions[i]);
+    }
 
 
+    $(".BlueCrystal, .WhiteCrystal, .GreenCrystal, .RedCrystal").on("click", function(){
+
+        var crystalValue = ($(this).attr("data-crystalvalue"));
+        crystalValue = parseInt(crystalValue);
+
+        counter+= crystalValue;
+
+        alert("Clicked!");
+       
+        alert("your new score is " + counter)
+        if (counter === targetNumber){
+            alert("You win!");
+        }
+        else if (counter >= targetNumber){
+            alert("You Lose!")
+        }
+
+    });
+    
+    
+ 
+ 
 
 
-
-
-    <script>
     
     
-    
-    
-    
-    
-    
-    
-    </script>
+</script>
 </body>
 </html>

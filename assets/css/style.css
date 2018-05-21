@@ -1,0 +1,26 @@
+#Crystals{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.RedCrystal:hover {
+    transform: scale3d(1.5,1.5,1.5);  
+}
+.GreenCrystal:hover {
+    transform: scale3d(1.5,1.5,1.5);  
+}
+
+.WhiteCrystal:hover {
+    transform: scale3d(1.5,1.5,1.5);  
+}
+.BlueCrystal:hover {
+    transform: scale3d(1.5,1.5,1.5);  
+}
+
+#Crystals> img {
+    width: 250px;
+    height: 200px;
+    transition: transform 1s;
+  }
+
