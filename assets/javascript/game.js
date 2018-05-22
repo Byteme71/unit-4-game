@@ -20,9 +20,9 @@ $(document).ready ( function() {
     $(".RedCrystal").attr("data-crystalvalue", numberOptionsFour);
     
     var reset = function() {
-        var targetNumber = Math.floor((Math.random() * 100) + 19);
+        targetNumber = Math.floor((Math.random() * 100) + 19);
         $("#Number-Guess").text(targetNumber);
-        var counter = 0;
+        counter = 0;
         $("#Counter-Enter").text(counter);
     }    
 
