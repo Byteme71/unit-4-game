@@ -32,7 +32,7 @@ $(document).ready ( function() {
         var crystalValue = ($(this).attr("data-crystalvalue"));
         crystalValue = parseInt(crystalValue);
 
-        alert("Clicked!");
+        // alert("Clicked!");
 
         counter+= crystalValue;
         $("#Counter-Enter").text(counter);
