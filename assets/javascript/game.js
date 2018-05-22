@@ -36,17 +36,13 @@ $(document).ready ( function() {
 
         counter+= crystalValue;
         $("#Counter-Enter").text(counter);
-        
-       
-        alert("your new score is " + counter)
-
-      
+  
         if (counter === targetNumber){
             alert("You win!");
             wins++;
             $("#Wins-Enter").text(wins);
             reset();
-           
+            alert("Your new wins: " + wins + " !!")
 
         }
         else if (counter >= targetNumber){
