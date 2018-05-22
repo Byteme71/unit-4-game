@@ -7,12 +7,20 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/javascript/game.js"></script>
+   
     <title>Daniela is so Lost in JS/JQUERY LAND</title>
+
 </head>
 <body>
+    <div id="Heading">
+        <h1 id="title">Collect all the Diamonds!</h1> 
+            <p id="secondtitle">But don't get greedy! Too many and you lose!</p>
+    </div>  
+    <div id="Instructions">
+        <p> </p>
 
-    <h1>Number to Guess: <span id="Number-Guess"> </span></h1>
-
+    </div>
     <div id="Crystals">
 
         <img class="BlueCrystal" src="./assets/images/580b585b2edbce24c47b23f2.png" alt="crytsal1">
@@ -26,49 +34,17 @@
 
     </div>
 
-<script>
-    
-    var targetNumber = Math.floor((Math.random() * 100) + 19);
-    $("#Number-Guess").text(targetNumber);
-
-    var counter = 0;
-
-    var numberOptions = [10,5,1,7];
-
-    for (var i = 0; i < numberOptions.length; i++){
-
-        $(".BlueCrystal, .WhiteCrystal, .GreenCrystal, .RedCrystal").attr("data-crystalvalue", numberOptions[i]);
-
-        console.log(numberOptions[i]);
-    }
+    <div id="Game">
+        <h2>Number to Guess: <span id="Number-Guess"> </span></h2>
+    </br>
+        <h2>Counter: <span id="Counter-Enter"> </span></h2>
+    </br>
+        <h2>Wins: <span id="Wins-Enter"> </span></h2>
+    </br>
+        <h2>Losses: <span id="Losses-Enter"> </span></h2>
+    </div>
 
 
-    $(".BlueCrystal, .WhiteCrystal, .GreenCrystal, .RedCrystal").on("click", function(){
 
-        var crystalValue = ($(this).attr("data-crystalvalue"));
-        crystalValue = parseInt(crystalValue);
-
-        counter+= crystalValue;
-
-        alert("Clicked!");
-       
-        alert("your new score is " + counter)
-        if (counter === targetNumber){
-            alert("You win!");
-        }
-        else if (counter >= targetNumber){
-            alert("You Lose!")
-        }
-
-    });
-    
-    
- 
- 
-
-
-    
-    
-</script>
 </body>
 </html>
